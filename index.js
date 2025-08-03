@@ -107,13 +107,13 @@ let persons= [
 
   app.get('/info',(request, response, ) => {
    
-      response.send(`<p>The phonebook has info for ${persons.length} people</p>
+      response.send(`<p>The phonebook has info for ${persons.length} people's</p>
         <p>${getDateInfo()}</p>`)
    
   })
 
 
-  const port = 3001
+  const port = process.env.PORT || 3001
 
   app.listen(port)
   console.log('server running at port', port)
